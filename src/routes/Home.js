@@ -23,7 +23,7 @@ export default function Home() {
         alignItems='center'
         px={{ base: 4, md: '10%', lg: '25%' }}
         pt={{base: 0, md: 6}}
-        pb={12}>
+        pb={{base: 6, md: 12}}>
         <Image
           src={portrait}
           alt='Jason Fox'
@@ -31,6 +31,7 @@ export default function Home() {
           borderRadius='full'
           objectFit='cover'
           mr={{ base: 0, md: '1rem' }}
+          mb={{ base: 2, md: 0}}
           style={{ borderStyle: 'solid', borderWidth: '4px', borderColor: useColorModeValue('gray.100', 'gray.800') }} />
         <Text textAlign={{ base: 'center', md: 'left' }}>
           {statement}
