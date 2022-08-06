@@ -2,35 +2,32 @@ import {
     FaGithub,
     FaLinkedin,
     FaFileAlt
-} from 'react-icons'
+} from 'react-icons/fa';
 
 const links = [
     {
         "name": "Github",
-        "description": "My Github",
+        "desc": "My Github",
         "url": "https://github.com/JtheFox/",
-        "active": true,
         "icon": FaGithub
     },
     {
         "name": "LinkedIn",
-        "description": "My LinkedIn",
+        "desc": "My LinkedIn",
         "url": "https://www.linkedin.com/in/jason-fox-878262197/",
-        "active": false,
         "icon": FaLinkedin
     },
     {
         "name": "Resume",
-        "description": "My Resume",
+        "desc": "My Resume",
         "url": "#",
-        "active": false,
         "icon": FaFileAlt
     }
 ]
 // Link template
 // {
 //     "name": "",
-//     "description": "",
+//     "desc": "",
 //     "url": "",
 //     "active": true,
 //     "fa_icon": ""
