@@ -17,12 +17,12 @@ function App() {
           height='100vh'
         >
           <Navbar />
-          <Box flex='1' as='main'>
+          <Box flex='1' as='main' p={10}>
             <Routes>
               <Route path='/' element={<Home />} />
             </Routes>
-            <Footer />
           </Box>
+          <Footer />
         </Flex>
       </Router>
     </ChakraProvider>

@@ -7,15 +7,15 @@ export default function Home() {
 
   return (
     <VStack>
-      <Stack direction={['column', 'row']} px={{base: 4, md: '25%'}}>
-        <Image 
-        src={portrait}
-        alt='Jason Fox'
-        boxSize='128px'
-        m='auto'
-        borderRadius='full'
-        objectFit='cover' />
-        <Text textAlign={{base: 'center', md: 'left'}}>{statement}</Text>
+      <Stack direction={['column', 'row']} px={{ base: 4, md: '25%' }}>
+        <Image
+          src={portrait}
+          alt='Jason Fox'
+          boxSize='128px'
+          m='auto'
+          borderRadius='full'
+          objectFit='cover' />
+        <Text textAlign={{ base: 'center', md: 'left' }}>{statement}</Text>
       </Stack>
     </VStack>
   )
