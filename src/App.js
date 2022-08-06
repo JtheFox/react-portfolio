@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 // Pages
-import Home from './routes/Home';
+import About from './routes/About';
+import Portfolio from './routes/Portfolio';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Navbar />
           <Box flex='1' as='main' p={10}>
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/' element={<About />} />
+              <Route path='/portfolio' element={<Portfolio />} />
             </Routes>
           </Box>
           <Footer />
