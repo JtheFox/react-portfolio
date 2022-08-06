@@ -1,7 +1,9 @@
+import { Flex, Spacer } from '@chakra-ui/react';
+
 export default function Navbar() {
   return (
-    <nav>
+    <Flex as='nav'>
       
-    </nav>
+    </Flex>
   )
 }

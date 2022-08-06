@@ -7,10 +7,9 @@ export default function Footer() {
       <Flex justifyContent='center' spacing='1rem'>
         {links.map(({ name, desc, url, active, icon }) => {
           return (
-            <Tooltip label={desc} placement='top'>
+            <Tooltip key={name} label={desc} placement='top'>
               <Link href={url} p={3}>
                 <Icon
-                  key={name}
                   as={icon}
                   w={8}
                   h={8}

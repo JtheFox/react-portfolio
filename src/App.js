@@ -17,7 +17,7 @@ function App() {
           height='100vh'
         >
           <Navbar />
-          <Box flex='1'>
+          <Box flex='1' as='main'>
             <Routes>
               <Route path='/' element={<Home />} />
             </Routes>
