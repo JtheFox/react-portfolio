@@ -1,5 +1,5 @@
 import './App.css';
-import { ChakraProvider, Flex } from '@chakra-ui/react'
+import { ChakraProvider, Flex, Box } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Components
 import Navbar from './components/Navbar';
@@ -12,15 +12,17 @@ function App() {
     <ChakraProvider>
       <Router>
         <Flex
-          flexDirection='column'
+          direction='column'
           width='100wh'
           height='100vh'
         >
           <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-          </Routes>
-          <Footer />
+          <Box flex='1'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+            </Routes>
+            <Footer />
+          </Box>
         </Flex>
       </Router>
     </ChakraProvider>
