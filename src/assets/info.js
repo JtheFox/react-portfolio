@@ -85,9 +85,8 @@ const projects = [
 //     "keywords": []
 // }
 
-const brandStatement = "I'm Jason Fox, a recent Computer Science graduate of UNC Charlotte and Full-Stack Web Developer. I have a passion for creating an interactive and intuitive user experience through my work.";
-
-const qualifications = {
+const about = {
+    statement: 'I am a web developer and recent CS graduate eager to dive into the world of web development. I have experience in the agile process and project management. I am primarily familiarized with the MERN stack, but I am a fast learner and interested in picking any framework, API, or other development tool needed to complete a task or project.',
     tools: [
         "VSCode",
         "Github",
@@ -118,4 +117,4 @@ const qualifications = {
     ]
 }
 
-export { links, projects, brandStatement, qualifications };
+export { links, projects, about };
