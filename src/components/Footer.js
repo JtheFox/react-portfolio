@@ -6,11 +6,11 @@ export default function Footer() {
   const offsetbg = useColorModeValue('gray.100', 'gray.700');
 
   return (
-    <Flex justifyContent='center' spacing='1rem' as='footer' bg={offsetbg}>
+    <Flex justifyContent='center' spacing='1rem' as='footer' bg={offsetbg} pt={2}>
       {links.map(({ name, desc, url, icon }) => {
         return (
           <Tooltip key={name} label={desc} placement='top'>
-            <Link href={url} p={3}>
+            <Link href={url} py={1} px={3}>
               <Icon
                 as={icon}
                 w={8}
