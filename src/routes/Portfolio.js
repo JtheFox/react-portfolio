@@ -44,16 +44,32 @@ function ProjectCardList({ projectList }) {
       ),
     }
   }
+  const cardStyles = {
+    '&': {
+      ml: { base: '-0.5rem', lg: 0 },
+      transition: { lg: '0.2s ease-in-out' }
+    },
+    '&:not(:first-child)': {
+      ml: { lg: '-3rem' }
+    },
+    '&:hover': {
+      transform: { lg: 'translateY(-1rem)' }
+    },
+    '&:hover~&': {
+      transform: { lg: 'translateX(3rem)' }
+    }
+  }
 
   return (
     <Flex
-      p={{ base: '0 10% 0.75rem', lg: '2rem' }}
+      p={{ base: '1rem 10%', lg: '2rem' }}
       sx={listStyles}>
       {Array.isArray(projectList) && projectList.reverse().map(project => (
         <ProjectCard
           key={project.title}
           projectDetails={project}
           boxShadow={cardShadow}
+          sx={cardStyles}
         />
       ))}
     </Flex>
