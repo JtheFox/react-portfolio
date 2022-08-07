@@ -1,23 +1,27 @@
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../assets/info';
 import {
-  VStack,
+  Container,
   Flex,
+  Image,
+  Box,
+  Heading,
+  Text,
+  Spacer,
   useColorModeValue
 } from '@chakra-ui/react';
+import { titleToId } from '../utils/helpers';
 
 export default function Portfolio() {
   return (
-    <Flex direction='column' alignItems={{ lg: 'center' }}>
-      <ProjectCardList projectList={projects} />
-      <VStack>
-        
-      </VStack>
+    <Flex direction='column'>
+      <ProjectCardList projectList={projects} mb={6} />
+      <ProjectDescList projectList={projects} />
     </Flex>
   )
 };
 
-function ProjectCardList({ projectList }) {
+function ProjectCardList({ projectList, ...props }) {
   const cardShadow = {
     base: useColorModeValue('-0.5rem 0 1rem rgba(0, 0, 0, 0.06)', '-0.5rem 0 1rem rgba(0, 0, 0, 0.80)'),
     lg: useColorModeValue('-0.5rem 0 1.5rem rgba(0, 0, 0, 0.12)', '-0.5rem 0 1.5rem rgba(0, 0, 0, 0.60)')
@@ -65,14 +69,48 @@ function ProjectCardList({ projectList }) {
   }
 
   return (
-    <Flex p={{ base: '1rem 2rem', lg: '2rem' }} maxW='100vw' sx={listStyles}>
+    <Flex
+      p={{ base: '1rem 2rem', lg: '2rem' }}
+      mx='auto'
+      maxW='100vw'
+      sx={listStyles}
+      {...props}>
       {Array.isArray(projectList) && projectList.reverse().map(project => (
         <ProjectCard
           key={project.title}
           projectDetails={project}
           boxShadow={cardShadow}
+          imageLink={`#${titleToId(project.title)}`}
           sx={cardStyles}
         />
+      ))}
+    </Flex>
+  )
+}
+
+function ProjectDescList({ projectList, ...props }) {
+  const zebrastripe = useColorModeValue('blackAlpha.50', 'whiteAlpha.50');
+
+  return (
+    <Flex direction='column' maxW='100vw' {...props}>
+      {projectList.map(({ image, title, desc }) => (
+        <Flex
+          key={title}
+          id={titleToId(title)}
+          direction={{ base: 'column', md: 'row' }}
+          alignItems={{ base: 'center', md: 'start' }}
+          px={{ base: 4, lg: 12 }}
+          py={4}
+          _even={{ bg: zebrastripe }}>
+          <Container w={{ base: 'xs', md: 'sm', lg: 'md' }}>
+            <Image src={image} alt={title} />
+          </Container>
+          <Spacer />
+          <Box w={{ base: 'xs', md: 'sm', lg: 'lg' }} textAlign={{ base: 'center', md: 'left' }}>
+            <Heading>{title ?? 'Untitled'}</Heading>
+            <Text>{desc ?? 'No description provided.'}</Text>
+          </Box>
+        </Flex>
       ))}
     </Flex>
   )

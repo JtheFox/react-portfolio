@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 
-export default function ProjectCard({ projectDetails, ...props }) {
+export default function ProjectCard({ projectDetails, imageLink, ...props }) {
   const { title, date, image, live, repo, tags } = projectDetails;
   const linkHover = useColorModeValue('blue.600', 'blue.200');
   const lightText = useColorModeValue('blackAlpha.600', 'whiteAlpha.700');
@@ -50,16 +50,18 @@ export default function ProjectCard({ projectDetails, ...props }) {
         direction='column'
         justifyContent='center'
         flex='1'>
-        <Image
-          src={image}
-          alt={title}
-          maxHeight='150px'
-          maxWidth='105%'
-          ml='-0.25rem'
-          borderRadius='md'
-          opacity='75%'
-          transition='0.1s ease-in-out'
-          _hover={{ opacity: '100%' }} />
+        <Link ml='-0.25rem' href={imageLink ?? null}>
+          <Image
+            src={image}
+            alt={title}
+            maxHeight='150px'
+            maxWidth='105%'
+            m='auto'
+            borderRadius='md'
+            opacity='75%'
+            transition='0.1s ease-in-out'
+            _hover={{ opacity: '100%' }} />
+        </Link>
       </Flex>
       <Box className='card-footer'>
         <Link href={repo}>

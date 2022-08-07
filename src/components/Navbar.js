@@ -22,11 +22,19 @@ export default function Navbar() {
   ]
 
   return (
-    <Flex as='header' px={16} py={4} bg={offsetbg}>
+    <Flex
+      as='header'
+      px={16}
+      py={4}
+      bg={offsetbg}
+      maxW='100vw'>
       <Heading as='h1'>Jason Fox</Heading>
       <Spacer />
       <HStack spacing={10}>
-        <HStack as='nav' fontSize='xl' spacing={4}>
+        <HStack
+          as='nav'
+          fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
+          spacing={4}>
           {navLinks.map((link, i) => (
             <NavLink key={i} navRef={link} />
           ))}
