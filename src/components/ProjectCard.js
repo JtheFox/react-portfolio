@@ -31,6 +31,7 @@ export default function ProjectCard({ projectDetails, ...props }) {
       px={8}
       borderRadius='xl'
       bg={cardBg}
+      zIndex={0}
       {...props}>
       <Box as='header' className='card-header'>
         <Text color={lightText} fontSize='sm' my={1}>
