@@ -16,7 +16,7 @@ export default function ProjectCard({ projectDetails, ...props }) {
   const { title, date, image, live, repo, tags } = projectDetails;
   const linkHover = useColorModeValue('blue.600', 'blue.200');
   const lightText = useColorModeValue('blackAlpha.600', 'whiteAlpha.700');
-  const cardBg = useColorModeValue('blackAlpha.50', 'whiteAlpha.50')
+  const cardBg = useColorModeValue('gray.50', 'gray.800')
 
   return (
     <Flex
@@ -25,6 +25,8 @@ export default function ProjectCard({ projectDetails, ...props }) {
       className='card'
       minHeight='350px'
       minWidth='300px'
+      maxHeight='350px'
+      maxWidth='300px'
       py={6}
       px={8}
       borderRadius='xl'

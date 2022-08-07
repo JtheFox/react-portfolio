@@ -18,7 +18,11 @@ function App() {
           height='100vh'
         >
           <Navbar />
-          <Box flex='1' as='main' p={10}>
+          <Box
+            flex='1'
+            as='main'
+            py={{ base: 6, lg: 10 }}
+            px={0}>
             <Routes>
               <Route path='/' element={<About />} />
               <Route path='/portfolio' element={<Portfolio />} />

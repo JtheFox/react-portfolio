@@ -1,3 +1,36 @@
 body {
   font-family: monospace, monospace;
 }
+
+.card {
+  width: 100%;
+  margin-left: -0.5rem;
+}
+
+/* large screens */
+@media screen and (min-width: 62em) {
+  .card {
+    transition: 0.2s ease-in-out;
+  }
+
+  .card > * {
+    opacity: 80%;
+    transition: 0.2s ease-in;
+  }
+
+  .card:hover > * {
+      opacity: 100%;
+  }
+
+  .card:not(:first-child) {
+    margin-left: -3rem;
+  }
+
+  .card:hover {
+      transform: translateY(-1rem);
+  }
+
+  .card:hover~.card {
+      transform: translateX(3rem);
+  }
+}
