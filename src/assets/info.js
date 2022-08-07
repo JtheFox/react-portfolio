@@ -40,7 +40,7 @@ const projects = [
         "image": "https://i.imgur.com/Y5MsQDC.png",
         "live": "#",
         "repo": "https://github.com/FidelHen/Chopping-Block",
-        "1": ["React Native", "Firebase"]
+        "tags": ["React Native", "Firebase"]
     },
     {
         "date": "May 2022",
