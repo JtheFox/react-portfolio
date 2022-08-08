@@ -102,8 +102,8 @@ function ProjectDescList({ projectList, ...props }) {
           id={titleToId(title)}
           direction={{ base: 'column', md: 'row' }}
           alignItems={{ base: 'center', md: 'start' }}
-          px={{ base: 4, lg: 20 }}
-          py={4}
+          px={{ base: 4, lg: 24 }}
+          py={{ base: 8, md: 6, lg: 4 }}
           _even={{ bg: zebrastripe }}>
           <Container w={{ base: 'xs', md: 'sm', lg: 'md' }}>
             <Image
@@ -114,7 +114,10 @@ function ProjectDescList({ projectList, ...props }) {
               borderRadius='md' />
           </Container>
           <Spacer />
-          <Box w={{ base: 'xs', md: 'sm', lg: '50%' }} textAlign={{ base: 'center', md: 'left' }}>
+          <Box
+            w={{ base: 'xs', md: 'sm', lg: '50%' }} 
+            pr={{lg: 16}}
+            textAlign={{ base: 'center', md: 'left' }}>
             <Heading>
               {title ?? 'Untitled'}
             </Heading>
