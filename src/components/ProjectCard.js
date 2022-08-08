@@ -8,15 +8,18 @@ import {
   Link,
   Icon,
   Flex,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
+import { LinkIcon } from '@chakra-ui/icons';
+import { isValidLink } from '../utils/helpers';
 
 export default function ProjectCard({ projectDetails, imageLink, ...props }) {
   const { title, date, image, live, repo, tags } = projectDetails;
   const linkHover = useColorModeValue('blue.600', 'blue.200');
   const lightText = useColorModeValue('blackAlpha.600', 'whiteAlpha.700');
-  const cardBg = useColorModeValue('gray.50', 'gray.800')
+  const cardBg = useColorModeValue('gray.50', 'gray.800');
+  console.log(isValidLink('a'))
 
   return (
     <Flex
@@ -35,15 +38,14 @@ export default function ProjectCard({ projectDetails, imageLink, ...props }) {
       {...props}>
       <Box as='header' className='card-header'>
         <Text color={lightText} fontSize='sm' my={1}>
-          {date}
+          {date ?? 'Date unknown'}
         </Text>
-        <Heading
-          as='a'
-          href={(typeof live === 'string') && live}
-          size='md'
-          _hover={{ color: linkHover }}>
-          {title ?? 'Untitled'}
-        </Heading>
+        <Flex alignItems='center'>
+          <Heading size='md'>
+            {title ?? 'Untitled'}
+          </Heading>
+          {isValidLink(live) && <LinkIcon ml={2} as={'a'} _hover={{ color: linkHover, cursor: 'pointer' }} />}
+        </Flex>
       </Box>
       <Flex
         className='card-body'

@@ -10,13 +10,16 @@ import {
   Spacer,
   useColorModeValue
 } from '@chakra-ui/react';
+import { LinkIcon } from '@chakra-ui/icons';
 import { titleToId } from '../utils/helpers';
+import { isValidLink } from '../utils/helpers';
 
 export default function Portfolio() {
+  const myProjects = Array.from(projects).reverse();
   return (
     <Flex direction='column'>
-      <ProjectCardList projectList={projects} mb={6} />
-      <ProjectDescList projectList={projects} />
+      <ProjectCardList projectList={myProjects} mb={6} />
+      <ProjectDescList projectList={myProjects} />
     </Flex>
   )
 };
@@ -93,7 +96,7 @@ function ProjectDescList({ projectList, ...props }) {
 
   return (
     <Flex direction='column' maxW='100vw' {...props}>
-      {projectList.map(({ image, title, desc }) => (
+      {projectList.map(({ image, title, desc, live }) => (
         <Flex
           key={title}
           id={titleToId(title)}
@@ -103,12 +106,31 @@ function ProjectDescList({ projectList, ...props }) {
           py={4}
           _even={{ bg: zebrastripe }}>
           <Container w={{ base: 'xs', md: 'sm', lg: 'md' }}>
-            <Image src={image} alt={title} />
+            <Image
+              src={image}
+              alt={title}
+              maxH={'2xs'}
+              ml='auto'
+              borderRadius='md' />
           </Container>
           <Spacer />
-          <Box w={{ base: 'xs', md: 'sm', lg: 'lg' }} textAlign={{ base: 'center', md: 'left' }}>
-            <Heading>{title ?? 'Untitled'}</Heading>
-            <Text>{desc ?? 'No description provided.'}</Text>
+          <Box w={{ base: 'xs', md: 'sm', lg: 'xl' }} textAlign={{ base: 'center', md: 'left' }}>
+            <Heading>
+              {title ?? 'Untitled'}
+            </Heading>
+            {isValidLink(live) &&
+              <Heading
+                as='a'
+                href={live}
+                fontWeight='none'
+                size={{ base: 'xs', md: 'sm', lg: 'md' }}
+                _hover={{ textDecoration: 'underline' }}>
+                Live Site <LinkIcon />
+              </Heading>
+            }
+            <Text mt={2}>
+              {(typeof desc === 'string' && desc.length > 0) || 'No description provided.'}
+            </Text>
           </Box>
         </Flex>
       ))}
