@@ -1,6 +1,10 @@
 import './App.css';
 import { ChakraProvider, Flex, Box } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Styles
+import '@fontsource/roboto-slab';
+import '@fontsource/raleway';
+import theme from './theme';
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -10,7 +14,7 @@ import Portfolio from './routes/Portfolio';
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Router>
         <Flex
           direction='column'

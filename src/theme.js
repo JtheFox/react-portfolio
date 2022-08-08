@@ -1,10 +1,14 @@
 import { extendTheme } from '@chakra-ui/react';
 
-const config = {
-  initialColorMode: 'dark',
-  useSystemColorMode: true,
-}
-
-const theme = extendTheme({ config })
+const theme = extendTheme({ 
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: true,
+  },
+  fonts: {
+    heading: '"Raleway", sans-serif',
+    body: '"Roboto Slab", sans-serif'
+  }
+})
 
 export default theme
