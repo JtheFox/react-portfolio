@@ -102,7 +102,7 @@ function ProjectDescList({ projectList, ...props }) {
           id={titleToId(title)}
           direction={{ base: 'column', md: 'row' }}
           alignItems={{ base: 'center', md: 'start' }}
-          px={{ base: 4, lg: 12 }}
+          px={{ base: 4, lg: 20 }}
           py={4}
           _even={{ bg: zebrastripe }}>
           <Container w={{ base: 'xs', md: 'sm', lg: 'md' }}>
@@ -114,7 +114,7 @@ function ProjectDescList({ projectList, ...props }) {
               borderRadius='md' />
           </Container>
           <Spacer />
-          <Box w={{ base: 'xs', md: 'sm', lg: 'xl' }} textAlign={{ base: 'center', md: 'left' }}>
+          <Box w={{ base: 'xs', md: 'sm', lg: '50%' }} textAlign={{ base: 'center', md: 'left' }}>
             <Heading>
               {title ?? 'Untitled'}
             </Heading>
@@ -129,7 +129,7 @@ function ProjectDescList({ projectList, ...props }) {
               </Heading>
             }
             <Text mt={2}>
-              {(typeof desc === 'string' && desc.length > 0) || 'No description provided.'}
+              {((typeof desc === 'string' && desc.length > 0) && desc) || 'No description provided.'}
             </Text>
           </Box>
         </Flex>

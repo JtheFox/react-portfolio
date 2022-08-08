@@ -19,8 +19,7 @@ export default function ProjectCard({ projectDetails, imageLink, ...props }) {
   const linkHover = useColorModeValue('blue.600', 'blue.200');
   const lightText = useColorModeValue('blackAlpha.600', 'whiteAlpha.700');
   const cardBg = useColorModeValue('gray.50', 'gray.800');
-  console.log(isValidLink('a'))
-
+  
   return (
     <Flex
       as='article'
