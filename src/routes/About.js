@@ -54,11 +54,12 @@ export default function Home() {
         <Box>
           {contactInfo.map(({ type, icon, ref }) => (
             <Text
+              key={type}
               fontSize='md'
               display='flex'
               alignItems='center'>
               <Icon as={icon} mr={2} />
-              <Text>{ref}</Text>
+              {ref}
             </Text>
           ))}
         </Box>
