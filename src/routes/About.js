@@ -1,4 +1,4 @@
-import { about } from '../assets/info';
+import { about, contactInfo } from '../assets/info';
 import portrait from '../assets/portrait.jpg';
 import {
   Flex,
@@ -7,6 +7,7 @@ import {
   VStack,
   Image,
   Text,
+  Icon,
   List,
   ListItem,
   Heading,
@@ -23,8 +24,7 @@ export default function Home() {
         justifyContent='center'
         alignItems='center'
         px={{ base: 4, md: '10%', lg: '25%' }}
-        pt={{ base: 0, md: 6 }}
-        pb={{ base: 6, md: 12 }}>
+        pt={{ base: 0, md: 6 }}>
         <Image
           src={portrait}
           alt='Jason Fox'
@@ -38,8 +38,30 @@ export default function Home() {
           {statement}
         </Text>
       </Flex>
-      <Flex>
-        <Box></Box>
+      <Flex
+        direction={{ base: 'column', md: 'row' }}
+        mx='auto'
+        py={{ base: 6, md: 12 }}>
+        <Box>
+          <Heading
+            size={{ base: 'xl', md: 'lg' }}
+            mr={{ base: 0, md: 6 }}
+            mt={{ base: 0, md: 4 }}
+            textAlign={{ base: 'center', md: 'right' }}>
+            Contact Me
+          </Heading>
+        </Box>
+        <Box>
+          {contactInfo.map(({ type, icon, ref }) => (
+            <Text
+              fontSize='md'
+              display='flex'
+              alignItems='center'>
+              <Icon as={icon} mr={2} />
+              <Text>{ref}</Text>
+            </Text>
+          ))}
+        </Box>
       </Flex>
       <Stack direction={['column', 'row']} spacing={{ base: 6, md: 16, lg: 36 }}>
         <SkillList label='Skills' list={skills} />

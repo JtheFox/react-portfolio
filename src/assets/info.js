@@ -96,7 +96,7 @@ const contactInfo = [
     {
         type: 'LinkedIn',
         icon: FaLinkedin,
-        ref: '/jasonfox96'
+        ref: '/jthefox'
     }
 ]
 
