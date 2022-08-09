@@ -39,12 +39,13 @@ export default function Footer() {
           )
         })}
       </Flex>
-      <Link
-        as={Code}
+      <Code
+        as='a'
         href={sourceCode}
-        bg='none'>
+        bg='none'
+        _hover={{ textDecoration: 'underline' }}>
         Source Code
-      </Link>
+      </Code>
     </Box>
   )
 }

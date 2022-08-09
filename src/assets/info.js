@@ -1,7 +1,8 @@
 import {
     FaGithub,
     FaLinkedin,
-    FaFileAlt
+    FaFileAlt,
+    FaEnvelope,
 } from 'react-icons/fa';
 
 const links = [
@@ -20,7 +21,7 @@ const links = [
     {
         "name": "Resume",
         "desc": "My Resume",
-        "url": "#",
+        "url": "https://drive.google.com/file/d/1yJbo57M9Nb6IbZvqhMWbmfBEE_A-N3MG/view?usp=sharing",
         "icon": FaFileAlt
     }
 ]
@@ -58,7 +59,8 @@ const projects = [
         "image": "https://i.imgur.com/IZ72hZt.png",
         "live": "https://jthefox.github.io/weather-dashboard/",
         "repo": "https://github.com/JtheFox/weather-dashboard",
-        "tags": ["Bootstrap", "jQuery"]
+        "tags": ["Bootstrap", "jQuery"],
+        "desc": "This was a simple weather dashboard app created using the JQuery, Bootstrap, and OpenWeatherMap API. The page also stores persistent data using local storage."
     },
     {
         "date": "June 2022",
@@ -79,6 +81,25 @@ const projects = [
         "desc": "This was a group project designed to utilize the SpaceX API and was my first project involving backend development and persistent user data. I designed the ui using Bulma with additional custom styling. I also did a heavy amount of work implementing the routes and database interactions using Express and Sequelize."
     },
 ]
+
+const contactInfo = [
+    {
+        type: 'Email',
+        icon: FaEnvelope,
+        ref: 'jfox0096@gmail.com'
+    },
+    {
+        type: 'Github',
+        icon: FaGithub,
+        ref: '/jthefox'
+    },
+    {
+        type: 'LinkedIn',
+        icon: FaLinkedin,
+        ref: '/jasonfox96'
+    }
+]
+
 // Project template
 // {
 //     "date": "",
@@ -114,14 +135,15 @@ const about = {
     ],
     skills: [
         'User-First Thinking',
+        'Agile Process',
+        'Wireframe/Prototyping',
         'Problem Solving',
-        'Project Management Tools',
+        'Project Management',
         'Strong Communication',
-        'Web Design',
-        'Wireframe Creation'
+        "Fast Learner"
     ]
 }
 
-const sourceCode = ''
+const sourceCode = 'https://github.com/JtheFox/react-portfolio'
 
-export { links, projects, about, sourceCode };
+export { links, projects, about, sourceCode, contactInfo };

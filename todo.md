@@ -1,4 +1,5 @@
 # Todo List
-- Make repeated useColorModeValue hooks global
+- Create global styles for repeated useColorModeValue uses
 - Create tests
 - Add email form
+- Add fallbacks to hosted images

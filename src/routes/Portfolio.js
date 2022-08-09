@@ -75,7 +75,7 @@ function ProjectCardList({ projectList, ...props }) {
     <Flex
       p={{ base: '1rem 2rem', lg: '2rem' }}
       mx='auto'
-      maxW='100vw'
+      maxW='100%'
       sx={listStyles}
       {...props}>
       {Array.isArray(projectList) && projectList.reverse().map(project => (
