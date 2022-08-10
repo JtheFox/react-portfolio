@@ -112,7 +112,7 @@ const contactInfo = [
 // }
 
 const about = {
-    statement: 'I am a web developer and recent CS graduate eager to dive into the world of web development. I have experience in the agile process and project management. I am primarily familiarized with the MERN stack, but I am a fast learner and interested in picking any framework, API, or other development tool needed to complete a task or project.',
+    statement: 'I am a web developer and recent CS graduate, eager to dive into the world of web development. I have experience in Agile processes and project management. I am primarily familiarized with the MERN stack, but I am a fast learner and interested in picking any framework, ORM/ODM, API, or other development tool needed to complete a task or project.',
     tools: [
         "VSCode",
         "Github",
@@ -120,7 +120,8 @@ const about = {
         "Adobe Creative Suite",
         "Figma",
         "Canva",
-        "Slack"
+        "Slack",
+        "Draw.io"
     ],
     languages: [
         "HTML5",

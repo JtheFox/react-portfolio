@@ -11,6 +11,7 @@ import {
   List,
   ListItem,
   Heading,
+  Divider,
   useColorModeValue,
 } from '@chakra-ui/react';
 
@@ -18,58 +19,74 @@ export default function Home() {
   const { statement, tools, languages, skills } = about;
 
   return (
-    <VStack>
-      <Flex
-        direction={{ base: 'column', md: 'row' }}
-        justifyContent='center'
+    <VStack pt={{ base: 0, md: 6 }} spacing={12} >
+      <Stack
+        direction={{ base: 'column', lg: 'row' }}
         alignItems='center'
-        px={{ base: 4, md: '10%', lg: '25%' }}
-        pt={{ base: 0, md: 6 }}>
-        <Image
-          src={portrait}
-          alt='Jason Fox'
-          boxSize='128px'
-          borderRadius='full'
-          objectFit='cover'
-          mr={{ base: 0, md: '1rem' }}
-          mb={{ base: 2, md: 0 }}
-          style={{ borderStyle: 'solid', borderWidth: '4px', borderColor: useColorModeValue('gray.100', 'gray.800') }} />
-        <Text textAlign={{ base: 'center', md: 'left' }}>
-          {statement}
-        </Text>
-      </Flex>
-      <Flex
-        direction={{ base: 'column', md: 'row' }}
-        mx='auto'
-        py={{ base: 6, md: 12 }}>
-        <Box>
-          <Heading
-            size={{ base: 'xl', md: 'lg' }}
-            mr={{ base: 0, md: 6 }}
-            mt={{ base: 0, md: 4 }}
-            textAlign={{ base: 'center', md: 'right' }}>
-            Contact Me
-          </Heading>
-        </Box>
-        <Box>
-          {contactInfo.map(({ type, icon, ref }) => (
-            <Text
-              key={type}
-              fontSize='md'
-              display='flex'
-              alignItems='center'>
-              <Icon as={icon} mr={2} />
-              {ref}
-            </Text>
-          ))}
-        </Box>
-      </Flex>
+        justifyContent='center'
+        spacing={8}
+        px={{ base: 4, md: 12, lg: '15%' }}>
+        <ContactCard contactInfo={contactInfo} />
+        <Flex
+          direction={{ base: 'column', md: 'row' }}
+          alignItems='center'
+          justifyContent={{base: 'center', lg: 'end'}}>
+          <Image
+            src={portrait}
+            alt='Jason Fox'
+            boxSize='128px'
+            borderRadius='full'
+            objectFit='cover'
+            mr={{ base: 0, md: 10 }}
+            mb={{ base: 2, md: 0 }}
+            style={{ borderStyle: 'solid', borderWidth: '4px', borderColor: useColorModeValue('gray.100', 'gray.800') }} />
+          <Text
+            maxW={{ base: '90%', md: '70%' }}
+            fontSize={{ base: 'md', lg: 'sm' }}
+            textAlign={{ base: 'center', md: 'left' }}>
+            {statement}
+          </Text>
+        </Flex>
+
+      </Stack>
+
+      <Divider w='75%' />
+
       <Stack direction={['column', 'row']} spacing={{ base: 6, md: 16, lg: 36 }}>
         <SkillList label='Skills' list={skills} />
         <SkillList label='Languages' list={languages} />
         <SkillList label='Tools' list={tools} />
       </Stack>
     </VStack>
+  )
+}
+
+function ContactCard({ contactInfo, ...props }) {
+  return (
+    <Box
+      height='min-content'
+      px={{ base: 5, md: 7 }}
+      pt={{ base: 1, md: 4 }}
+      pb={{ base: 2, md: 5 }}
+      borderRadius='md'
+      boxShadow='outline'
+      {...props}>
+      <Heading
+        size={{ base: 'xl', md: 'lg' }}
+        textAlign='center'>
+        Contact Me
+      </Heading>
+      {contactInfo.map(({ type, icon, ref }) => (
+        <Text
+          key={type}
+          fontSize='md'
+          display='flex'
+          alignItems='center'>
+          <Icon as={icon} mr={2} />
+          {ref}
+        </Text>
+      ))}
+    </Box>
   )
 }
 

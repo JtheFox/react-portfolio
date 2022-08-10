@@ -27,7 +27,7 @@ function App() {
             as='main'
             px={0}
             pt={{ base: 6, lg: 10 }}
-            pb={{ base: 16, md: 20, lg: 28 }}>
+            pb={{ base: 20, lg: 28 }}>
             <Routes>
               <Route path='/' element={<About />} />
               <Route path='/portfolio' element={<Portfolio />} />

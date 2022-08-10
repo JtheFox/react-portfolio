@@ -3,11 +3,13 @@ import { projects } from '../assets/info';
 import {
   Container,
   Flex,
+  VStack,
   Image,
   Box,
   Heading,
   Text,
   Spacer,
+  Divider,
   useColorModeValue
 } from '@chakra-ui/react';
 import { LinkIcon } from '@chakra-ui/icons';
@@ -17,10 +19,11 @@ import { isValidLink } from '../utils/helpers';
 export default function Portfolio() {
   const myProjects = Array.from(projects).reverse();
   return (
-    <Flex direction='column'>
-      <ProjectCardList projectList={myProjects} mb={6} />
+    <VStack spacing={8}>
+      <ProjectCardList projectList={myProjects} mb={{ base: 6, lg: 0 }} />
+      <Divider w='90%' />
       <ProjectDescList projectList={myProjects} />
-    </Flex>
+    </VStack>
   )
 };
 
@@ -115,8 +118,8 @@ function ProjectDescList({ projectList, ...props }) {
           </Container>
           <Spacer />
           <Box
-            w={{ base: 'xs', md: 'sm', lg: '50%' }} 
-            pr={{lg: 16}}
+            w={{ base: 'xs', md: 'sm', lg: '50%' }}
+            pr={{ lg: 16 }}
             textAlign={{ base: 'center', md: 'left' }}>
             <Heading>
               {title ?? 'Untitled'}
