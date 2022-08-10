@@ -17,7 +17,7 @@ import ThemeButton from './ThemeButton';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const offsetbg = useColorModeValue('blackAlpha.300', 'gray.700');
+  const offsetbg = useColorModeValue('gray.200', 'gray.700');
   const navLinks = [
     {
       path: '/',

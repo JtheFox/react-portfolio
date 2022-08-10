@@ -25,14 +25,19 @@ function App() {
           <Box
             flex='1'
             as='main'
-            py={{ base: 6, lg: 10 }}
-            px={0}>
+            px={0}
+            pt={{ base: 6, lg: 10 }}
+            pb={{ base: 16, md: 20, lg: 28 }}>
             <Routes>
               <Route path='/' element={<About />} />
               <Route path='/portfolio' element={<Portfolio />} />
             </Routes>
           </Box>
-          <Footer />
+          <Footer
+            position='fixed'
+            left={0}
+            bottom={0}
+            w='100vw' />
         </Flex>
       </Router>
     </ChakraProvider>

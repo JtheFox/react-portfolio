@@ -9,9 +9,9 @@ import {
 } from '@chakra-ui/react';
 import { links, sourceCode } from '../assets/info';
 
-export default function Footer() {
+export default function Footer(props) {
   const linkHover = useColorModeValue('blue.600', 'blue.200');
-  const offsetbg = useColorModeValue('blackAlpha.300', 'gray.700');
+  const offsetbg = useColorModeValue('gray.200', 'gray.700');
 
   return (
     <Box
@@ -19,18 +19,20 @@ export default function Footer() {
       bg={offsetbg}
       pt={2}
       pb={1}
-      textAlign='center'>
+      textAlign='center'
+      h='70px'
+      {...props}>
       <Flex
         justifyContent='center'
         spacing='1rem'>
         {links.map(({ name, desc, url, icon }) => {
           return (
             <Tooltip key={name} label={desc} placement='top'>
-              <Link href={url} pt={1} px={3}>
+              <Link href={url} pt={1} px={2}>
                 <Icon
                   as={icon}
-                  w={8}
-                  h={8}
+                  w={6}
+                  h={6}
                   _hover={{ color: linkHover }}
                 >
                 </Icon>
