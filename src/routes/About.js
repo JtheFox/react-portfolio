@@ -1,7 +1,6 @@
 import { about, contactInfo } from '../assets/info';
 import portrait from '../assets/portrait.jpg';
 import {
-  Flex,
   Box,
   Stack,
   VStack,
@@ -24,13 +23,10 @@ export default function Home() {
         direction={{ base: 'column', lg: 'row' }}
         alignItems='center'
         justifyContent='center'
-        spacing={8}
+        spacing={{ base: 8, lg: 12 }}
         px={{ base: 4, md: 12, lg: '15%' }}>
         <ContactCard contactInfo={contactInfo} />
-        <Flex
-          direction={{ base: 'column', md: 'row' }}
-          alignItems='center'
-          justifyContent={{base: 'center', lg: 'end'}}>
+        <Stack alignItems='center' justifyContent={{ lg: 'right' }} direction={{ base: 'column', md: 'row' }}>
           <Image
             src={portrait}
             alt='Jason Fox'
@@ -41,13 +37,12 @@ export default function Home() {
             mb={{ base: 2, md: 0 }}
             style={{ borderStyle: 'solid', borderWidth: '4px', borderColor: useColorModeValue('gray.100', 'gray.800') }} />
           <Text
-            maxW={{ base: '90%', md: '70%' }}
+            maxW={{ base: '90%', lg: '60%' }}
             fontSize={{ base: 'md', lg: 'sm' }}
             textAlign={{ base: 'center', md: 'left' }}>
             {statement}
           </Text>
-        </Flex>
-
+        </Stack>
       </Stack>
 
       <Divider w='75%' />
