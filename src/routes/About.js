@@ -20,29 +20,29 @@ export default function Home() {
   return (
     <VStack pt={{ base: 0, md: 6 }} spacing={12} >
       <Stack
-        direction={{ base: 'column', lg: 'row' }}
+        direction={{ base: 'column', md: 'row' }}
         alignItems='center'
         justifyContent='center'
+        flexWrap='wrap'
         spacing={{ base: 8, lg: 12 }}
-        px={{ base: 4, md: 12, lg: '15%' }}>
+        mx={{ base: 4, md: 12, lg: '15%' }}>
         <ContactCard contactInfo={contactInfo} />
-        <Stack alignItems='center' justifyContent={{ lg: 'right' }} direction={{ base: 'column', md: 'row' }}>
-          <Image
-            src={portrait}
-            alt='Jason Fox'
-            boxSize='128px'
-            borderRadius='full'
-            objectFit='cover'
-            mr={{ base: 0, md: 10 }}
-            mb={{ base: 2, md: 0 }}
-            style={{ borderStyle: 'solid', borderWidth: '4px', borderColor: useColorModeValue('gray.100', 'gray.800') }} />
-          <Text
-            maxW={{ base: '90%', lg: '60%' }}
-            fontSize={{ base: 'md', lg: 'sm' }}
-            textAlign={{ base: 'center', md: 'left' }}>
-            {statement}
-          </Text>
-        </Stack>
+        <Image
+          src={portrait}
+          alt='Jason Fox'
+          mb={{ base: -4, md: 0 }}
+          boxSize='128px'
+          borderRadius='full'
+          objectFit='cover'
+          style={{ borderStyle: 'solid', borderWidth: '4px', borderColor: useColorModeValue('gray.100', 'gray.800') }} />
+        <Text
+          minW={{ md: '50%', lg: 0 }}
+          maxW={{ base: '90%', md: '80%', lg: '40%' }}
+          pt={{ md: 8, lg: 0 }}
+          fontSize={{ base: 'md', lg: 'sm' }}
+          textAlign={{ base: 'center', md: 'left' }}>
+          {statement}
+        </Text>
       </Stack>
 
       <Divider w='75%' />
