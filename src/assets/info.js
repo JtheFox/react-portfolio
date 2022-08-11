@@ -3,7 +3,7 @@ import {
     FaLinkedin,
     FaFileAlt,
     FaEnvelope,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const links = [
     {
@@ -84,19 +84,19 @@ const projects = [
 
 const contactInfo = [
     {
-        type: 'Email',
+        type: "Email",
         icon: FaEnvelope,
-        ref: 'jfox0096@gmail.com'
+        ref: "jfox0096@gmail.com"
     },
     {
-        type: 'Github',
+        type: "Github",
         icon: FaGithub,
-        ref: '/jthefox'
+        ref: "/jthefox"
     },
     {
-        type: 'LinkedIn',
+        type: "LinkedIn",
         icon: FaLinkedin,
-        ref: '/jthefox'
+        ref: "/jthefox"
     }
 ]
 
@@ -108,14 +108,15 @@ const contactInfo = [
 //     "live": "",
 //     "repo": "",
 //     "tags": [],
-//     "desc": ''
+//     "desc": ""
 // }
 
 const about = {
-    statement: 'I am a full-stack developer and recent CS graduate, eager to dive into the world of web development. I have experience in Agile processes and project management. I am primarily familiarized with the MERN stack, but I am a fast learner and interested in picking any framework, ORM/ODM, API, or other development tool needed to complete a task or project.',
+    statement: "I am a full-stack developer and recent CS graduate, eager to dive into the world of web development. I have experience in Agile processes and project management. I am primarily familiarized with the MERN stack, but I am a fast learner and interested in picking any framework, ORM/ODM, API, or other development tool needed to complete a task or project.",
     tools: [
         "VSCode",
         "Github",
+        "AWS",
         "Google Workspace",
         "Adobe Creative Suite",
         "Figma",
@@ -127,24 +128,26 @@ const about = {
         "HTML5",
         "CSS",
         "JavaScript",
-        "NodeJS",
+        "Node.JS",
         "Express.js",
         "React",
         "Next.js",
         "MySQL",
-        "MongoDB",
+        "NoSQL",
     ],
     skills: [
-        'User-First Thinking',
-        'Agile Process',
-        'Wireframe/Prototyping',
-        'Problem Solving',
-        'Project Management',
-        'Strong Communication',
-        "Fast Learner"
+        "User-First Thinking",
+        "Agile Process",
+        "Wireframe/Prototyping",
+        "Problem Solving",
+        "Debugging",
+        "Project Management",
+        "Strong Communication",
+        "Flexible & Fast Learner",
+        "Video & Image Editing"
     ]
 }
 
-const sourceCode = 'https://github.com/JtheFox/react-portfolio'
+const sourceCode = "https://github.com/JtheFox/react-portfolio"
 
 export { links, projects, about, sourceCode, contactInfo };
