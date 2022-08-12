@@ -7,4 +7,4 @@
 
 This is a `create-react-app` portfolio developed with [React](https://reactjs.org/), designed by myself using [Chakra UI](https://chakra-ui.com/), and deployed on [AWS Amplify](https://aws.amazon.com/amplify/). The design is a new iteration of the design I created for my [first portfolio](https://github.com/JtheFox/portfolio) built using raw HTML/CSS/JS.
 
-[Live Site](https://jthefox.herokuapp.com/portfolio)
+[Live Site](https://jthefox.com)
