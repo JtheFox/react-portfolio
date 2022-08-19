@@ -61,7 +61,7 @@ const projects = [
         "live": undefined,
         "repo": "https://github.com/FidelHen/Chopping-Block",
         "tags": ["React Native", "Firebase", "Ant Design"],
-        "desc": "This was my capstone group project in college. I came up with the idea for the project as a unique take on discovering local restaurants using the Yelp API, allowing recommendations to be influenced by preferences set by the user. My primary in this project was scrum master, and I took care of the project management tasks during each sprint. I also aided in development of the app."
+        "desc": "This was my capstone group project in college. I came up with the idea for the project as a unique take on discovering local restaurants using the Yelp API, allowing recommendations to be influenced by preferences set by the user. My primary role in this project was scrum master, and I took care of the project management tasks during each sprint. I also aided in development of the app."
     },
     {
         "date": "May 2022",
