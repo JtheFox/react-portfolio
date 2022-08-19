@@ -81,7 +81,7 @@ function ProjectCardList({ projectList, ...props }) {
       maxW='100%'
       sx={listStyles}
       {...props}>
-      {Array.isArray(projectList) && projectList.reverse().map(project => (
+      {Array.isArray(projectList) && projectList.map(project => (
         <ProjectCard
           key={project.title}
           projectDetails={project}
