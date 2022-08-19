@@ -1,5 +1,5 @@
 # My Portfolio Website
-**Now hosted on AWS!**
+**Hosting has been migrated from Heroku to AWS!**
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)
