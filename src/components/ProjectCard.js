@@ -43,7 +43,11 @@ export default function ProjectCard({ projectDetails, imageLink, ...props }) {
           <Heading size='md'>
             {title ?? 'Untitled'}
           </Heading>
-          {isValidLink(live) && <LinkIcon ml={2} as={'a'} _hover={{ color: linkHover, cursor: 'pointer' }} />}
+          {isValidLink(live) &&
+            <Link href={live}>
+              <LinkIcon ml={2} _hover={{ color: linkHover, cursor: 'pointer' }} />
+            </Link>
+          }
         </Flex>
       </Box>
       <Flex
