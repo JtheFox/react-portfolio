@@ -19,7 +19,7 @@ export default function ProjectCard({ projectDetails, imageLink, ...props }) {
   const linkHover = useColorModeValue('blue.600', 'blue.200');
   const lightText = useColorModeValue('blackAlpha.600', 'whiteAlpha.700');
   const cardBg = useColorModeValue('gray.50', 'gray.800');
-  
+
   return (
     <Flex
       as='article'
@@ -73,7 +73,9 @@ export default function ProjectCard({ projectDetails, imageLink, ...props }) {
         </Link>
         <HStack>
           {Array.isArray(tags) && tags.map(tag => (
-            <Tag key={tag}>{tag}</Tag>
+            <Tag fontSize='xs' key={tag}>
+              {tag.replaceAll(' ', '\u00A0')}
+            </Tag>
           ))}
         </HStack>
       </Box>
