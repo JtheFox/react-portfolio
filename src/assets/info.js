@@ -85,7 +85,7 @@ const projects = [
         "date": "August 2022",
         "title": "Rosiebot",
         "image": "https://i.imgur.com/aINJ4Ek.png",
-        "live": undefined,
+        "live": "https://jthefox.github.io/rosiebot/",
         "repo": "https://github.com/JtheFox/rosiebot",
         "tags": ["Nodejs", "Discordjs", "Sequelize"],
         "desc": "This is a Discord bot I initially created to use in a few private servers, but I am building it out and plan to make a public release once I add enough scalability and functionality. The bot is hosted on Heroku and uses an AWS RDS MySQL database to store persistent data. The bot also makes use of Discord's application commands."
