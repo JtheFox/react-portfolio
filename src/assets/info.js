@@ -64,15 +64,6 @@ const projects = [
         "desc": "This was my capstone group project in college. I came up with the idea for the project as a unique take on discovering local restaurants using the Yelp API, allowing recommendations to be influenced by preferences set by the user. My primary role in this project was scrum master, and I took care of the project management tasks during each sprint. I also aided in development of the app."
     },
     {
-        "date": "May 2022",
-        "title": "Password Generator",
-        "image": "https://i.imgur.com/F24PmtE.png",
-        "live": "https://jthefox.github.io/password-generator/",
-        "repo": "https://github.com/JtheFox/password-generator",
-        "tags": ["HTML", "CSS", "JS"],
-        "desc": "This was the first real website I built from scratch as I was learning the basics of web development, using RandExp for the random string generation. This was also my first time creating my own ui, as well as adapting the ui to be responsive and mobile-friendly."
-    },
-    {
         "date": "June 2022",
         "title": "Somewhere.",
         "image": "https://i.imgur.com/AnQy3h7.png",
@@ -107,6 +98,15 @@ const projects = [
         "repo": "https://github.com/JtheFox/twitter-discord-feed",
         "tags": ["Lambda", "Twitter API", "Webhook"],
         "desc": "This is an AWS Lambda function I created to solve the simple problem my friends and I had of constantly checking a Twitter page for tweets about new game changes. I set an AWS EventBridge rule trigger the function on a schedule, and the function checks for and runs a content filter on new tweets. Any new tweets that pass the filter are sent via webhook to a Discord channel. The most recent tweet id is stored as a baseline for the query on the next invocation to avoid duplicate posts."
+    },
+    {
+        "date": "August 2022",
+        "title": "Store-A-String API",
+        "image": "https://i.imgur.com/b1TWoV0.png",
+        "live": undefined,
+        "repo": "https://github.com/JtheFox/store-a-string",
+        "tags": ["REST API", "Serverless", "DynamoDB"],
+        "desc": "This is an AWS-hosted serverless API utilizing Lambda functions for the API endpoints. I created it to solve a problem I encountered where I needed to remotely perform CRUD operations on a single piece of plain text. I did not find any suitable existing solutions so I created my own. The API uses DynamoDB for storage and uses EventBridge for automatic maintenance to prune all entries that have not been retrieved in 30 days."
     },
 ]
 
