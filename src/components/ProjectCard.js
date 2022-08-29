@@ -8,7 +8,7 @@ import {
   Link,
   Icon,
   Flex,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 import { LinkIcon } from '@chakra-ui/icons';
@@ -40,9 +40,11 @@ export default function ProjectCard({ projectDetails, imageLink, ...props }) {
           {date ?? 'Date unknown'}
         </Text>
         <Flex alignItems='center'>
-          <Heading size='md'>
-            {title ?? 'Untitled'}
-          </Heading>
+          <Link href={imageLink ?? null} _hover={{textDecoration: 'none'}}>
+            <Heading size='md'>
+              {title ?? 'Untitled'}
+            </Heading>
+          </Link>
           {isValidLink(live) &&
             <Link href={live}>
               <LinkIcon ml={2} _hover={{ color: linkHover, cursor: 'pointer' }} />
