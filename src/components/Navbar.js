@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/icons';
 import { NavLink as Link } from "react-router-dom";
 import ThemeButton from './ThemeButton';
+import { resumeURL } from '../assets/info';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -21,11 +22,15 @@ export default function Navbar() {
   const navLinks = [
     {
       path: '/',
+      label: 'Portfolio'
+    },
+    {
+      path: '/about',
       label: 'About'
     },
     {
-      path: '/portfolio',
-      label: 'Portfolio'
+      path: resumeURL,
+      label: 'Resume'
     }
   ]
 

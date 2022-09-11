@@ -158,6 +158,8 @@ const about = {
     ]
 }
 
-const sourceCode = "https://github.com/JtheFox/react-portfolio"
+const sourceCode = "https://github.com/JtheFox/react-portfolio";
 
-export { links, projects, about, sourceCode, contactInfo };
+const resumeURL = 'https://drive.google.com/file/d/1yJbo57M9Nb6IbZvqhMWbmfBEE_A-N3MG/view?usp=sharing';
+
+export { links, projects, about, sourceCode, contactInfo, resumeURL };

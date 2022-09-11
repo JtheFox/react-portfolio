@@ -29,8 +29,8 @@ function App() {
             pt={{ base: 6, lg: 10 }}
             pb={{ base: 20, lg: 28 }}>
             <Routes>
-              <Route path='/' element={<About />} />
-              <Route path='/portfolio' element={<Portfolio />} />
+              <Route path='/' element={<Portfolio />} />
+              <Route path='/about' element={<About />} />
             </Routes>
           </Box>
           <Footer
