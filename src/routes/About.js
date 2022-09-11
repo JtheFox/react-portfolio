@@ -14,7 +14,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-export default function Home() {
+export default function About() {
   const { statement, tools, languages, skills } = about;
 
   return (
