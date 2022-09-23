@@ -9,6 +9,6 @@ This is a `create-react-app` portfolio developed with [React](https://reactjs.or
 
 [Live Site](https://jthefox.com)
 
-## Future Updates
-* Email-based contact form
-* Fallbacks for hosted images
+## Visuals
+![Projects page of my portfolio](./assets/portfolio-projects.png)
+![About page of my portfolio](./assets/portfolio-about.png)
